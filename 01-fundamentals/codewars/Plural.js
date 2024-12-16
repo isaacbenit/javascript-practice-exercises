@@ -6,10 +6,22 @@ You only need to worry about english grammar rules for this kata,
 where anything that isn't singular (one of something), it is plural (not one of something).
 
 All values will be positive integers or floats, or zero.*/
-function plural(n) {
-  // ...
-  if (n===1){ return false;}
+// function plural(n) {
+//   // ...
+//   if (n===1){ return false;}
   
-  else{return true };
+//   else{return true };
+// }
+// console.log(plural(89854342567));
+function ben(a){
+  let k=[]
+  for(let i=0; i<a.length;i++){
+    // console.log(Number(a[i]))
+    if(isNaN(a[i])){ 
+      k.push(a[i])
+    }
+    else{k.push('!')}
+  }
+  return k
 }
-console.log(plural(89854342567));
+console.log(ben('isaac123'))
