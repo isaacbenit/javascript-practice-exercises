@@ -1,15 +1,19 @@
 function commas(num){
     let p=[];
-     num = num.toString().split(',').join(' ').split('.').join(' ').reverse()
+     num = num.toString().split('').reverse()
+     console.log(num)
     for(i=0;i<num.length;i++){
-        if((i%3)===0 && i>1){
+        if(num[i]=== '.' ){
+            
+            i=num.length;
+        }
+        else if((i%3)===0 && i>1){
         p.push(num[i]+',')
          continue
         }
-        p.push(num[i])
     }
+        p.push(num[i])
+              
    return p.reverse().join('')
   }
-  console.log(commas(10,0.2,346))
-
- 
+  console.log(commas(100.2346))
