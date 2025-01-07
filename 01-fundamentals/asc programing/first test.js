@@ -3,12 +3,6 @@ function getWeather(){
         resolve('Sunny')
     })
 }
-// function onSuccess(data){
-//     console.log(`success ${data}`)
-// }
-// function onError(data){
-//     console.log(`Error ${data}`)
-// }
 async function wetherstate(on, error) {
     try{
         const result = await getWeather() 
