@@ -9,21 +9,21 @@ function checkname (fname){
         }, 1000);
     })
 }
-function checkId(id){
+function checkId(id,fname){
     return new Promise((resolve,reject)=>
-    {  
+    {  setTimeout(()=>{
         if(id===123){
             resolve(`you have loged in the site`)
         }
         else{
-            reject(`you entered a wrong id for ${fname} username`)
+            reject(`you entered a wrong id for the provided username`)
         }
+    },1000)
+        
     })
 }
 
-    checkname('zack').then((value)=> {console.log(value);return checkId(13)})
+    checkname('zack').then((value)=> {console.log(value);return checkId(123)})
     .then((value)=> console.log(value))
-    .catch((error)=>console.error(error))
-    //     ; return checkId())})
-    // .then((value)=> console.log(value)).catch((error)=>console.error(error))
+    .catch(error =>console.error(error));
     
