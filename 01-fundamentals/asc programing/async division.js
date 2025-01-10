@@ -1,5 +1,5 @@
 function divide(disor,denominator){
-    new Promise ((resolve,reject)=>{
+    return new Promise ((resolve,reject)=>{
         if (denominator === 0){
             reject(`the denominator should not be equal to 0`)
         }
@@ -9,7 +9,13 @@ function divide(disor,denominator){
         }
     })
 }
+
 async function show() {
-    const 
-    
+    try{
+    const divedeshow = await divide(10, 0);
+    console.log(divedeshow)}
+    catch(value){
+        console.log(value)
+    }
 }
+show()
