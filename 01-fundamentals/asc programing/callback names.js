@@ -12,4 +12,5 @@ function fullname(result){
     console.log(result);
 }
 
+
 fname('John','Doe',fullname)

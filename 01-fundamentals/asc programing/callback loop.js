@@ -9,4 +9,4 @@ function results(i){
     },1000*i)  
 }
 
-loop(results)
+loop(results).then(()=>)
