@@ -4,14 +4,14 @@ let firstcolor=new Promise((resolve,reject)=>{
     })
 
 let secondcolor = new Promise((resolve,reject)=>{
-    setTimeout(()=> {reject('blue')},2000) })
+    setTimeout(()=> {resolve('blue')},2000) })
 
 // Promise.all([firstcolor,secondcolor]).then()
 async function call() {
-    const allcolors= await Promise.allSettled([firstcolor,secondcolor]);
-     allcolors.forEach(color=>{
-        // console.log(color)
-    })
+    const allcolors= await Promise.race([firstcolor,secondcolor]);
+    //  allcolors.forEach(color=>{
+    //     // console.log(color)
+    // })
     console.log(allcolors)
 }
 call()
