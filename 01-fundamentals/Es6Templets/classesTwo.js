@@ -27,5 +27,6 @@ let bentley= new Bentley();
 console.log(toyota.new)
 toyota.move();
 toyota.parked();
-
+audi.move();
+audi.parked();
 bentley.movingfast();
