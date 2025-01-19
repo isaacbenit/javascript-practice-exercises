@@ -15,7 +15,7 @@ function retrive(data){
     })
 }
 async function show() {
-    let z = await retrive('https://jsonplaceholder.typicode.com/todos/1') 
+    let z = await retrive('https://jsonplaeholder.typicode.com/todos/1') 
     let k=z.json()
     console.log(k)
 }

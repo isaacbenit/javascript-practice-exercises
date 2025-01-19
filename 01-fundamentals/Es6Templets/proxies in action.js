@@ -1,17 +1,33 @@
-let dog ={
-    name:'max',
-    age:8,
-
-}
+let dog = {
+  name: "max",
+  age: 8,
+};
 const dogprox = {
-    
-get(target,property){
-    console.log(target[property])
-    // console.log(property[1]*2)
-}
+  get(target, property) {
+    console.log(target[property]);
+    if(property === 'age'){
+        console.log(target[property] * 2)
+    }
+  
+  },
+
+set(target, property, value){
+    target[property] = value
+  },
+
+//   delete: function(target,property){
+//     if (property === 'color'){
+//         delete target[property]
+//     }}
 }
 
-let proxy= new Proxy(dog,dogprox);
+let proxy = new Proxy(dog, dogprox);
+console.log(proxy)
+proxy.color = 'black'
+proxy.id = 5
+console.log(proxy)
+proxy.age;
+delete proxy.color
 console.log(proxy)
 // let b = proxy.age;
 // console.log(typeof(b))
