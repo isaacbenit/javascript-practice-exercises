@@ -24,8 +24,3 @@ function isPP(n){
   }
   console.log(isPP(90000))
 
-//  let  isaac = {
-//     name:'benit'
-//   }
-//   console.log(Object.hasOwn(isaac,'name'))
-//   console.log(isaac.name)
