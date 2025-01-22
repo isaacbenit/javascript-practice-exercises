@@ -11,9 +11,9 @@ const dogprox = {
   
   },
 
-set(target, property, value){
-    target[property] = value
-  },
+// set(target, property, value){
+//     target[property] = value
+//   },
 
 //   delete: function(target,property){
 //     if (property === 'color'){

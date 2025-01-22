@@ -3,8 +3,8 @@ class Animal{
         this.name=name
         this.age=age
     }
-    runing(){
-    console.log(`this animal named ${this.name} is ${this.age} years old`)
+    static runing(){
+        console.log(`this animal named ${this.name} is ${this.age} years old`)
     }
 
 }
@@ -18,8 +18,11 @@ class Dog extends Animal{
     }
 }
 let animal = new Animal('goat',15)
-animal.runing();
+Animal.runing();
 let dog = new Dog('you',23, 15)
 dog.run();
 dog.runing();
+// import { Isaac } from "./classesOne.js";
+// import { student } from "./classesOne.js";
+// console.log(student)
 
