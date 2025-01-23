@@ -23,7 +23,7 @@ function fun1(){
 })
 }
 function fun2(){
-    return  new Promise((resolve,reject)=>{
+    return  new Promise(async(resolve,reject)=>{
     setTimeout(()=>{
         resolve('2')
     },1000)

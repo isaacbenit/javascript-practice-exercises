@@ -10,7 +10,7 @@ async function ftch(a,b) {
 }
 async function show() {
     try{
-        let z= await ftch('https://jsonplaceholder.typicode.com',"https://jsonplaceholder.typicode.com/todos")
+        let z= await ftch('https://jsonplaceholder.typicode.com/users/1',"https://jsonplaceholder.typicode.com/todos")
         let b= await Promise.all( z.map(el => el.json()))
         console.log(b)
     }

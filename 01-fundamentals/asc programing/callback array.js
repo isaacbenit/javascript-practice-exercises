@@ -5,7 +5,7 @@ function arraychange(arr,callback){
         if(num%2===0){
             modarr.push(num)
         }
-        if(num>5){
+        if(num<5){
             grtarr.push(num)   
         }
     }
@@ -16,4 +16,7 @@ function arraychange(arr,callback){
 function disp(data){
     console.log(data)
 }
+// let a  = 'Isaac'
+// disp(a)
+
 arraychange([10,3,2,4,5,6,7,8,9],disp)
