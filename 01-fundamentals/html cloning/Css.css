@@ -1,34 +1,45 @@
 .footer{
-    background-color: rgb(76, 73, 73);
-    color: white;  
-    font-family:Arial, Helvetica, sans-serif ; 
+    background-color: #393b40f2;
+    opacity: 90%;
+    color: rgb(255, 255, 255);  
+    font-family:sans-serif ; 
     display: flex;
     width: 100%;
     max-width: 100%;
-    /* min-width: none; */
-    /* gap: 10px; */
+    min-width: none; 
+    gap: 10px;
     font-size: larger;
 }
 .row1{
-    /* margin-right: auto; */
+    margin-right: auto;
     margin-left: 56px;
-    padding-right:124px;
-    max-width: 25%;;
-    min-width: none;
+    padding-right:90px;
+    /* max-width: 50%; */
+    /* min-width: none; */
 }
 .upperpart{
+    padding-top: 5%;
     display: flex;
-    gap: 4.9em;
+    justify-content: space-between;
+    gap: 5em;
     list-style: none;
+    width: 70%;
 }
 .lowerpart{
     display: flex;
-    gap: 17em;
+    gap: 18em;
+    padding-right:2em ;
     list-style: none;
+    
 }
 hr{
     width: 100%;
 }
 button{
-    background-color: rgb(151, 242, 151);
+    background-color: rgba(65,179,93,255);
+    height: 3em;
+    width: 9em;
+    /* border-radius: 15%; */
+    box-shadow: 3px 3px 5px 5px;
+
 }
