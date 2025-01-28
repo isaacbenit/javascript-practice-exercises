@@ -1,14 +1,11 @@
-import Student from './Students.jsx'
+// import Student from './Students.jsx'
+import UserGreeting from'./UserGreeting'
 function App() {
-  
+
   return(
   <>
-  <Student name ='isaac' age={'30'} isStudent={true}/>
-  <Student name ='Patric' age={42} isStudent={false}/>
-  <Student name ='squidward' age={50} isStudent={false}/>
-
+  <UserGreeting isLoggedIn={true} username='isaac'/>
   </>
   );
 }
-
 export default App
