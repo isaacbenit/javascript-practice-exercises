@@ -1,17 +1,7 @@
 function checkbraces(a){
-    for(let i=0;i<a.lenght;i++){
-        for(let x=0;x<a.lenght;x++){
-            if(a[i]==='(' && (a.length-i===')')){
-                return true
-            }
-            if(a[i]==='(' && a[i+1]===')'){
-                return true
-            }  // ([])
-            else{
-                return false
-            }
-        }
-    }
-    ( ( { ) } ) - [ ( { } ) ]
+    if(a.includes("()")) return checkbraces(a.replace('()',''));
+    if(a.includes('[]')) return checkbraces(a.replace('[]',''));
+    if(a.includes('{}')) return checkbraces(a.replace('{}',''));
+    return a.length === 0;
 }
-console.log(checkbraces('([{])'))
+console.log(checkbraces('([{}])'))
