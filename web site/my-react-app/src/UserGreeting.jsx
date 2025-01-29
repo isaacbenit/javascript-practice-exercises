@@ -1,8 +1,17 @@
-// import Style from './index.css'
+import PropTypes, { bool } from 'prop-types'
 function UserGreeting(props){
-    return(props.isLoggedIn ? <h2 className="welcome-message">Welcome {props.username}</h2>
-    :<h2>please log in to continue</h2>)
+    const welcomeMessage= <h2 className="welcome-message">Welcome {props.username}</h2>
+    const logInPrompt= <h2 className="logIn-message">please log in to continue</h2>
+    return(props.isLoggedIn ? welcomeMessage : logInPrompt)
     
     
+}
+UserGreeting.PropTypes={
+    isLoggedIn: PropTypes.bool,
+    username: PropTypes.string,
+}
+UserGreeting.defaultProps ={
+    isLoggedIn: false,
+    username:'Guest',
 }
 export default UserGreeting
