@@ -1,14 +1,29 @@
-function List(){
-    const fruits=[  {id: 1,name:'apple', caloroes:95},
-                    {id: 2,name:'orange',caloroes:45},
-                    {id: 3,name:'bananas',caloroes:105},
-                    {id: 4,name:'coconut',caloroes:159}];
-    fruits.sort((a,b)=> b.name.localeCompare(a.name));
-    fruits.sort((a,b)=> b.caloroes - a.caloroes)
+import PropTypes from 'prop-types'
+function List(props){
+    const itemlist=props.items;
+    const category=props.category;
+    // fruits.sort((a,b)=> b.name.localeCompare(a.name));
+    // fruits.sort((a,b)=> b.caloroes - a.caloroes)
      
-    const listItems=fruits.map((fruit)=><li key={fruit.id}>
-                                            {fruit.name}:&nbsp;
-                                            {fruit.caloroes}</li>)
-    return(listItems)
+    const listItems=itemlist.map((item)=><li key={item.id}>
+                                            {item.name}:&nbsp;
+                                            {item.caloroes}</li>)
+    return( 
+            <>
+            <h3 className="list-category">{category}</h3>
+            <ul className="listnames">{listItems}</ul>
+            </>
+            )
+}
+List.defaultProps ={
+    category:'no specified category',
+    items:[],
+}
+List.prototype={
+    category:PropTypes.string,
+    items: PropTypes.arrayof(PropTypes.shape{id: PropTypes.number,
+                                            name:PropTypes.string,
+                                            caloroes:PropTypes.number,
+    })
 }
 export default List
