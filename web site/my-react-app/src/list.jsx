@@ -21,9 +21,9 @@ List.defaultProps ={
 }
 List.prototype={
     category:PropTypes.string,
-    items: PropTypes.arrayof(PropTypes.shape{id: PropTypes.number,
+    items: PropTypes.arrayOf(PropTypes.shape({id: PropTypes.number,
                                             name:PropTypes.string,
                                             caloroes:PropTypes.number,
-    })
+    })),
 }
 export default List

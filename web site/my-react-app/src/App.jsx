@@ -2,6 +2,7 @@ import Card from './card.jsx'
 import Student from './Students.jsx'
 import UserGreeting from'./UserGreeting'
 import List from './list.jsx'
+import Button2 from './Button2.jsx'
 function App() {
 
   const fruits=[  {id: 1,name:'apple', caloroes:95},
@@ -15,7 +16,7 @@ function App() {
 
   return(
   <>
- 
+  <Button2/>
   <Card/>
   <Student name='isaac' age={23} isStudent={false}/>
   <UserGreeting isLoggedIn={true} username='isaac'/>
