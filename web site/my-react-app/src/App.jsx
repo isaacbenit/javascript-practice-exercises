@@ -3,6 +3,9 @@ import Student from './Students.jsx'
 import UserGreeting from'./UserGreeting'
 import List from './list.jsx'
 import Button2 from './Button2.jsx'
+import ProfilePicture from './ProfilePicture.jsx'
+import MyComponent from './MyComponent.jsx'
+import Counter from './Counter.jsx'
 function App() {
 
   const fruits=[  {id: 1,name:'apple', caloroes:95},
@@ -16,6 +19,7 @@ function App() {
 
   return(
   <>
+  <ProfilePicture/>
   <Button2/>
   <Card/>
   <Student name='isaac' age={23} isStudent={false}/>
@@ -24,6 +28,12 @@ function App() {
   <UserGreeting isLoggedIn={true} />
   {fruits.length>0 && <List items={fruits} category='Fruits'/>}
   <List items={vegetables} category='vegis'/>
+  <br />
+  <br />
+  <hr />
+  <MyComponent/>
+  <hr />
+  <Counter/>
   </>
   );
 }
