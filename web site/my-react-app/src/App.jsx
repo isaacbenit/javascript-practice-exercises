@@ -6,6 +6,10 @@ import Button2 from './Button2.jsx'
 import ProfilePicture from './ProfilePicture.jsx'
 import MyComponent from './MyComponent.jsx'
 import Counter from './Counter.jsx'
+import ColorPicker from './colorpicker.jsx'
+import FavorateCar from './FavorateCar.jsx'
+import ListModifer from './listModifer.jsx'
+import ArrayOfObject from './arrayOfObjects.jsx'
 function App() {
 
   const fruits=[  {id: 1,name:'apple', caloroes:95},
@@ -34,6 +38,18 @@ function App() {
   <MyComponent/>
   <hr />
   <Counter/>
+  <br />
+  <br />
+  <hr />
+  <ColorPicker/>
+  <br />
+  <br />
+  <hr />
+  <FavorateCar/>
+  <hr />
+  <ListModifer/>
+  <hr />
+  <ArrayOfObject/>
   </>
   );
 }

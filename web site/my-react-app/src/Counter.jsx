@@ -3,7 +3,7 @@ function Counter(){
 
     let [num,setNumb]=useState(0)
     let reset=()=>{setNumb(num=0)}
-    let Increment=()=>{setNumb(num+=1)}
+    let Increment=()=>{setNumb(num =>num+1)}
     let Decrement=()=>{setNumb(num-=1)}
 
 
