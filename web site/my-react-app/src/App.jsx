@@ -10,6 +10,7 @@ import ColorPicker from './colorpicker.jsx'
 import FavorateCar from './FavorateCar.jsx'
 import ListModifer from './listModifer.jsx'
 import ArrayOfObject from './arrayOfObjects.jsx'
+import ToDoList from './ToDoList.jsx'
 function App() {
 
   const fruits=[  {id: 1,name:'apple', caloroes:95},
@@ -23,6 +24,7 @@ function App() {
 
   return(
   <>
+  <ToDoList/>
   <ProfilePicture/>
   <Button2/>
   <Card/>
