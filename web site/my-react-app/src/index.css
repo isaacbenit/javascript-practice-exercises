@@ -152,3 +152,14 @@
    font-size: 1.4rem;
    margin-left: 10px;
   }
+/* .clock-container{
+   background-image: url(assets/profile.jpg);
+   background-position: cover;
+   width: 50%;
+   height: 1234px;
+} */
+ .clock span{
+   font-size: 35px;
+   text-align: center;
+   margin-left: 45%;
+ }
