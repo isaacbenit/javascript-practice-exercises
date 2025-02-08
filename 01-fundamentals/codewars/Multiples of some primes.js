@@ -2,15 +2,21 @@ function findThem(numberLimit, primes) {
     let sum=0;
     if(numberLimit>0){
         for(i=1;i<numberLimit;i++){
-            for(pr=0;pr<primes.length;pr++){
-                if(typeof(primes[pr]=== 'bigint')){
-                    primes[pr]=Number(primes[pr])
+            // for(pr=0;pr<primes.length;pr++){
+           
+                if(i<primes.length){
+                    
+                    if(typeof(primes[i]=== 'bigint')){
+                        primes[i]=Number(primes[i])
+                        console.log(primes[i],i)
+                    }
+                    if(i%primes[i]===0){
+                        sum+=i
+                        // i=i+(primes.length-1)
+                    }
                 }
-                if(i%primes[pr]===0){
-                    sum+=i
-                    pr=pr+(primes.length-1)
-                }
-            }
+                
+            // }
         }
         return BigInt(sum)
     }

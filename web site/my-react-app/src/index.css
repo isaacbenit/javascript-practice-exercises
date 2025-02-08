@@ -94,7 +94,7 @@
    font-size: 4rem;
    color: white;
  }
- button{
+ /* button{
    font-size: 1.7rem;
    font-weight: bold;
    padding: 10px 20px;
@@ -103,7 +103,7 @@
    border-radius: 5px;
    cursor: pointer;
    transition: background-color o.5s ease;
- }
+ } */
  .add-button{
    background-color: hsl(125, 47%, 54%);
  }
@@ -163,3 +163,61 @@
    text-align: center;
    margin-left: 45%;
  }
+ .box{
+   border: 2px solid black;
+   padding:25px;
+ }
+.body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: hsl(0, 0%, 95%);
+}
+.stopwatch{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: 5px solid;
+   border-radius: 50px;
+   background-color: white;
+   padding: 30px;
+}
+.display{
+   font-size: 5rem;
+   font-family: monospace;
+   font-weight: bold;
+   color: hsl(0, 0%, 30%);
+   text-shadow: 2px 2px 2px hsla(0,0%,0%,0.75);
+   margin-bottom: 25px;
+}
+.contorls button{
+   font-size: 1.5rem;
+   font-weight: bold;
+   padding: 10px 20px;
+   margin: 5px;
+   min-width: 125px;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   color: white;
+   transition: background-color 0.5s ease;
+}
+.start-Button{
+   background-color: hsl(115, 100%, 40%);
+}
+.start-Button:hover{
+   background-color: hsl(115, 100%, 35%);
+}
+.stop-Button{
+   background-color: hsl(10, 90%, 50%);
+}
+.stop-Button:hover{
+   background-color: hsl(10, 90%, 45%);
+}
+.rest-Button{
+   background-color: hsl(205, 90%, 60%);
+}
+.rest-Button:hover{
+   background-color: hsl(205, 90%, 55%);
+}
+

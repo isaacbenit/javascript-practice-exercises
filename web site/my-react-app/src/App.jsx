@@ -12,6 +12,13 @@ import ListModifer from './listModifer.jsx'
 import ArrayOfObject from './arrayOfObjects.jsx'
 import ToDoList from './ToDoList.jsx'
 import DigitalClock from './DigitalClock.jsx'
+import ComponentA from './ComponentA.jsx'
+import StopWatch from './StopWatch.jsx'
+import FormName from './FormName.jsx'
+import Counter2 from './Counter2.jsx'
+import Fetching from './Fetching.jsx'
+
+
 function App() {
 
   const fruits=[  {id: 1,name:'apple', caloroes:95},
@@ -24,8 +31,18 @@ function App() {
       {id: 5,name:'Qucomber',caloroes:159}];
 
   return(
-  <>
-  <ToDoList/>
+    <>
+<FormName/>
+<Fetching/>
+
+    </>
+
+    // <Counter2/>
+  // <>
+  
+/* <FormName/> */
+
+  /* <ToDoList/>
   <DigitalClock/>
   <ProfilePicture/>
   <Button2/>
@@ -54,7 +71,15 @@ function App() {
   <ListModifer/>
   <hr />
   <ArrayOfObject/>
-  </>
-  );
+  <ComponentA/>
+  <hr />
+  <br />
+<StopWatch/>
+<br />
+<br /> */
+
+  // </>
+  
+  )
 }
 export default App

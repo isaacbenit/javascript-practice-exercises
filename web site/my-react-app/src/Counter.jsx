@@ -5,7 +5,9 @@ function Counter(){
     let [color,setcolor]=useState('green')
     let reset=()=>{setNumb(num=0);setcolor('black')}
     let Increment=()=>{setNumb(num =>num+1);setcolor('green')}
-    let Decrement=()=>{setNumb(num-=1);setcolor('red')}
+    let Decrement=()=>{
+        if(num>=1){
+        setNumb(num-=1);setcolor('red')}}
     // let colorChange=()=>{setcolor(c=>c=== 'green'? 'red':'green')}
 
 
