@@ -1,0 +1,13 @@
+function nextPrime(n) {
+  const p = n;
+  for (let i = 0; i < p/2; i++) {
+    if (n % i === 0) {
+        n++
+      break;
+    } else if(i===p/2){
+        console.log( n)
+    }
+  }
+  return n
+}
+console.log(nextPrime(15));
