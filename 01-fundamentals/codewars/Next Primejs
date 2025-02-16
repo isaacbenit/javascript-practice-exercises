@@ -1,13 +1,26 @@
+// function nextPrime(n) {
+//     for (let i = 2; i < 10; i++) {
+//     if(numb%i!=0){
+        
+//     }
+//     else{
+//         return numb
+//     }
+//         }
+
+//     }
+
+
 function nextPrime(n) {
-  const p = n;
-  for (let i = 0; i < p/2; i++) {
-    if (n % i === 0) {
-        n++
-      break;
-    } else if(i===p/2){
-        console.log( n)
+    let nprime=false;
+    if(nprime = false ){
+    for (let i = 2; i < n/2; i++) {
+        if (n % i === 0) {
+            nprime = false;
+        }
     }
-  }
-  return n
 }
-console.log(nextPrime(15));
+nprime=true
+console.log(n)
+}
+console.log(nextPrime(2972));

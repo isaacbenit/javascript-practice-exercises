@@ -14,6 +14,9 @@ function isAValidMessage(message) {
                 z = z - m
                 i = i - 1
             }
+            else if(i<0){
+                return false
+            }
             else {
                 z = z - message[i];
             }
