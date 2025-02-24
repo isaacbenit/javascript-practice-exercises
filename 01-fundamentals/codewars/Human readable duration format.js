@@ -56,4 +56,4 @@ function formatDuration (seconds) {
  
   }
 }
-  console.log(formatDuration(120))
+  console.log(formatDuration(12890))

@@ -8,7 +8,7 @@ function App() {
     <>
     <div>
     {showForm ? (
-        <FormName goBack={() => setShowForm(true)} />
+        <FormName goBack={() => setShowForm(false)} />
       ) : (
         <Book openForm={() => setShowForm(true)} />
       )}
