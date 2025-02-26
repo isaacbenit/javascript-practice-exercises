@@ -1,0 +1,10 @@
+const fs= require('fs')
+const readStream =fs.createReadStream('./docs/blog2.txt',{encoding:'utf-8'})
+const writeStream= fs.createWriteStream('./docs/blog4.txt')
+// readStream.on('data',(chuck)=>{
+//     console.log('---------newchuck ------')
+//     console.log(chuck)
+//     writeStream.write('\n NEW CHUCK \n')
+//     writeStream.write(chuck)
+// })
+readStream.pipe(writeStream)

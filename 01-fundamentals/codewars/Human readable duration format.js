@@ -3,7 +3,7 @@ function formatDuration (seconds) {
     return 'now';
    }
    if(seconds<3600){
-    let minutes=(seconds/60).toFixed(0)
+    let minutes=Math.floor(seconds/60)
     seconds=seconds%60
     if(minutes<1 && seconds==1){
         return `${seconds} second` 
@@ -26,9 +26,9 @@ function formatDuration (seconds) {
     return minutes===1?`${minutes} minute  ${seconds} seconds` :`${minutes} minutes  ${seconds} seconds`
    }
    if(seconds>=3600 && seconds<86400){
-    let hours=(seconds/3600).toFixed(0)
+    let hours=Math.floor(seconds/3600)
     seconds=seconds%3600
-    let minutes=(seconds/60).toFixed(0)
+    let minutes=Math.floor(seconds/60)
     seconds=seconds%60
     if(hours==1 && minutes==1 && seconds==1){
         return `${hours} hour, ${minutes} minute and ${seconds} second`
@@ -49,57 +49,17 @@ function formatDuration (seconds) {
         return `${hours} hour`
     }
     else{
-        return `${hours} hours, ${minutes} minutes and  ${seconds} seconds`
+        return `${hours} hours, ${minutes} minutes and ${seconds} seconds`
     }
 
  
   }
    if(seconds>=86400 && seconds<31536000){
-    let days=(seconds/86400).toFixed(0)
+    let days=Math.floor(seconds/86400)
     seconds=seconds%86400
-    let hours=(seconds/3600).toFixed(0)
+    let hours=Math.floor(seconds/3600)
     seconds=seconds%3600
-    let minutes=(seconds/60).toFixed(0)
-    seconds=seconds%60
-    if(days==1){
-        days=`${days} day`
-    }
-    else{
-        days=`${days} days`
-    }
-    if(hours===1 && minutes==1 && seconds==1){
-        return `${days} ${hours} hour, ${minutes} minute and ${seconds} second`
-    }
-    if(hours==1 && minutes==1 && seconds>1){
-        return `${days} ${hours} hour, ${minutes} minute and ${seconds} seconds`
-    }
-    if(hours==1 && minutes>1 && seconds==0){
-        return `${days} ${hours} hour, ${minutes} minutes`
-    }
-    if(minutes==1 && seconds==1 && hours>1){
-        return `${days} ${hours} hours, ${minutes} minute and ${seconds} second`
-    }
-    if(hours>1 && minutes==1 && seconds>1){
-        return `${days} ${hours} hours, ${minutes} minute and ${seconds} seconds`
-    }
-    if(hours>1 && minutes>1 && seconds==1){
-        return `${days} ${hours} hours, ${minutes} minutes and ${seconds} second`
-    }
-    if(hours==1 && seconds==0 && minutes == 0){
-        return `${days} ${hours} hour`
-    }
-    else{
-        return `${days} ${hours} hours, ${minutes} minutes and  ${seconds} seconds`
-    }
-  }
-  if(seconds>=31536000){
-    let years=(seconds/3153600).toFixed(0)
-    seconds=seconds
-    let days=(seconds/60).toFixed(0)
-    seconds=seconds%86400
-    let hours=(seconds/3600).toFixed(0)
-    seconds=seconds%3600
-    let minutes=(seconds/60).toFixed(0)
+    let minutes=Math.floor(seconds/60)
     seconds=seconds%60
     if(days==1){
         days=`${days} day`
@@ -108,26 +68,93 @@ function formatDuration (seconds) {
         days=`${days} days`
     }
     if(hours==1 && minutes==1 && seconds==1){
-        return `${days} ${hours} hour, ${minutes} minute and ${seconds} second`
+        return `${days}, ${hours} hour, ${minutes} minute and ${seconds} second`
     }
     if(hours==1 && minutes==1 && seconds>1){
-        return `${days} ${hours} hour, ${minutes} minute and ${seconds} seconds`
+        return `${days}, ${hours} hour, ${minutes} minute and ${seconds} seconds`
+    }
+    if(hours==1 && minutes>1 && seconds==0){
+        return `${days}, ${hours} hour, ${minutes} minutes`
     }
     if(minutes==1 && seconds==1 && hours>1){
-        return `${days} ${hours} hours, ${minutes} minute and ${seconds} second`
+        return `${days}, ${hours} hours, ${minutes} minute and ${seconds} second`
     }
     if(hours>1 && minutes==1 && seconds>1){
-        return `${days} ${hours} hours, ${minutes} minute and ${seconds} seconds`
+        return `${days}, ${hours} hours, ${minutes} minute and ${seconds} seconds`
     }
     if(hours>1 && minutes>1 && seconds==1){
-        return `${days} ${hours} hours, ${minutes} minutes and ${seconds} second`
+        return `${days}, ${hours} hours, ${minutes} minutes and ${seconds} second`
     }
     if(hours==1 && seconds==0 && minutes == 0){
         return `${days} ${hours} hour`
     }
+    if(hours==1 && minutes>1 && seconds>1 ){
+        return `${days}, ${hours} hour, ${minutes} minutes and ${seconds} seconds`
+    }
+    if(hours==0 && minutes>1 && seconds>1){
+        return `${days}, ${minutes} minutes and ${seconds} seconds`
+    }
+    if(hours>1 && minutes==0 && seconds>1){
+        return `${days}, ${hours} hours and ${seconds} seconds`
+    }
+    if(hours>1 && minutes>1 && seconds==0){
+        return `${days}, ${hours} hours and ${minutes} minutes`
+    }
     else{
-        return `${days} ${hours} hours, ${minutes} minutes and  ${seconds} seconds`
+        return `${days}, ${hours} hours, ${minutes} minutes and ${seconds} seconds`
+    }
+  }
+  if(seconds>=31536000){
+    let years=Math.floor(seconds/31536000)
+    seconds=seconds%31536000
+    let days=Math.floor(seconds/86400)
+    seconds=seconds%86400
+    let hours=Math.floor(seconds/3600)
+    seconds=seconds%3600
+    let minutes=Math.floor(seconds/60)
+    seconds=seconds%60
+    if(years==1){
+        years=`${years} year`
+    }
+    else{
+        years=`${years} years`
+    }
+    if(days==1){
+        days=`${days} day`
+    }
+    else{
+        days=`${days} days`
+    }
+    if(hours==1 && minutes==1 && seconds==1){
+        return `${years}, ${days}, ${hours} hour, ${minutes} minute and ${seconds} second`
+    }
+    if(hours==1 && minutes==1 && seconds>1){
+        return `${years}, ${days}, ${hours} hour, ${minutes} minute and ${seconds} seconds`
+    }
+    if(minutes==1 && seconds==1 && hours>1){
+        return `${years}, ${days}, ${hours} hours, ${minutes} minute and ${seconds} second`
+    }
+    if(hours>1 && minutes==1 && seconds>1){
+        return `${years}, ${days}, ${hours} hours, ${minutes} minute and ${seconds} seconds`
+    }
+    if(hours>1 && minutes>1 && seconds==1){
+        return `${years}, ${days}, ${hours} hours, ${minutes} minutes and ${seconds} second`
+    }
+    if(hours==1 && seconds==0 && minutes == 0){
+        return `${years}, ${days}, ${hours} hour`
+    }
+    if(hours>1 && minutes>1 && seconds==0){
+        return`${years}, ${days}, ${hours} hours and ${minutes} minutes`
+    }
+    if(hours==1 && minutes>1 && seconds>1){
+        return `${years}, ${days}, ${hours} hour, ${minutes} minutes and ${seconds} seconds`
+    }
+    if(hours >1 && minutes==0 && seconds>1){
+        return `${years}, ${days}, ${hours} hours, and ${seconds} seconds`
+    }
+    else{
+        return `${years}, ${days}, ${hours} hours, ${minutes} minutes and ${seconds} seconds`
     }
   }
 }
-  console.log(formatDuration(89400))
+  console.log(formatDuration(600840))
